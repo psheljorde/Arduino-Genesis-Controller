@@ -99,6 +99,4 @@ dataForController_t getControllerData(void){
     }
    
   return controllerData;
-    
 }
-
