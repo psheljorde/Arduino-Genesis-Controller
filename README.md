@@ -15,15 +15,15 @@ Genesis Controller Pinout
 
 | DB9 pin         | Arduino pin   |
 |:-------------   | -------------:|
-| 1 - Up          |              |
-| 2 - Down        |              |
-| 3 - Left        |              |
-| 4 - Right       |              |
-| 5 - 5V          |           5V |
-| 6 - A/B         |              |
-| 7 - Select      |              |
-| 8 - GND         |          GND |
-| 9 - START/C     |              |
+| 1 - Up          |            11 |
+| 2 - Down        |             2 |
+| 3 - Left        |             3 |
+| 4 - Right       |             4 |
+| 5 - 5V          |            5V |
+| 6 - A/B         |             6 |
+| 7 - Select      |             7 |
+| 8 - GND         |           GND |
+| 9 - START/C     |             9 |
 
 Order: Low/High
 
