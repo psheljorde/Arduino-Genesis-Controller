@@ -20,11 +20,13 @@ Genesis Controller Pinout
 | 3 - Left        |              |
 | 4 - Right       |              |
 | 5 - 5V          |           5V |
-| 6 - B/A         |              |
+| 6 - A/B         |              |
 | 7 - Select      |              |
 | 8 - GND         |          GND |
-| 9 - C/Start     |              |
- 
+| 9 - START/C     |              |
+
+Order: Low/High
+
 ## Software Setup
 
   1. Install the Drivers by running to UnoJoy/UnoJoyDriverInstaller.bat

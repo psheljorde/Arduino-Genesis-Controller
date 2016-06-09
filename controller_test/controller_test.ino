@@ -1,6 +1,3 @@
-#include "UnoJoy.h"
-
-// NOTE: Pins 0, 1 and 13 are used by UnoJoy for Serial Comm. // 
 
 int GEN_PIN_1 = 11;
 int GEN_PIN_2 = 2;
@@ -14,14 +11,14 @@ int GEN_PIN_9 = 9;
 int buttons[8];
 
 void setup(){
+  Serial.begin(9600);
   setupPins();
-  setupUnoJoy();
+  Serial.print("Aye aye, good to go captain!");
 }
 
 
 void loop(){
-  dataForController_t controllerData = getControllerData();
-  setControllerData(controllerData);
+  printButtons();
 }
 
 void setupPins(void){
@@ -60,45 +57,40 @@ void pollController(void){
     digitalWrite(GEN_PIN_7, LOW);
 }
 
-dataForController_t getControllerData(void){
+void printButtons(void){
     
     pollController();
 
-    dataForController_t controllerData = getBlankDataForController();
-
     if(buttons[0] == 0){
-       controllerData.dpadUpOn = 1;
+      Serial.println("UP");
     }
     
     if(buttons[1] == 0){
-      controllerData.dpadDownOn = 1;
+      Serial.println("DOWN");
     }
     
     if(buttons[2] == 0){
-        controllerData.dpadLeftOn = 1;
+      Serial.println("LEFT");
     }
     
     if(buttons[3] == 0){
-      controllerData.dpadRightOn = 1;
+      Serial.println("RIGHT");
     }
     
     if(buttons[4] == 0){
-      controllerData.squareOn = 1;
+      Serial.println("A");
     }
     
     if(buttons[5] == 0){
-      controllerData.startOn = 1;
+      Serial.println("START");
     }
     
     if(buttons[6] == 0){
-      controllerData.crossOn = 1;
+      Serial.println("B");
     }
     
     if(buttons[7] == 0){
-      controllerData.circleOn = 1;
-    }
-   
-  return controllerData;
-    
+      Serial.println("C");
+    }    
 }
 
